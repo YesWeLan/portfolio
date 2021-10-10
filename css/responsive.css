@@ -1,0 +1,188 @@
+/*
+    responsive
+*/
+
+/***********
+    xs
+    < 576px
+***********/
+
+@media screen and (max-width: 576px)
+{
+    nav
+    {
+        padding-top: 80px;
+    }
+
+    .accueil > div:nth-child(1) > p
+    {
+        font-size: 2em;
+        white-space: nowrap;
+    }
+
+    .titre_accueil > h1
+    {
+        font-size: 2.5em;
+        white-space: nowrap;
+    }
+
+    .titre_accueil > p
+    {
+        font-size: 1.2em;
+        white-space: nowrap;
+    }
+
+    .boutons_accueil> button
+    {
+        position: relative;
+        top: 0;
+        font-size: 1em;
+    }
+
+    .icon_menu
+    {
+        width: 30px;
+        height: 20px;
+    }
+
+    .icon_menu_first,
+    .icon_menu_second,
+    .icon_menu_third
+    {
+        width: 30px;
+    }
+
+    .icon_menu_second
+    {
+        top: 9px;
+    }
+}
+
+/***********
+    s
+    > 576px
+***********/
+
+
+/***********
+    m
+    > 768px
+***********/
+
+@media screen and (min-width: 768px)
+{
+    nav
+    {
+        width: 250px;
+    }
+
+    .front-end > div > img,
+    .back-end > div > img,
+    .outils > div > img
+    {
+        width: 70px;
+        height: 70px;
+    }
+
+    .conteneur_projets
+    {
+        text-align: inherit;
+    }
+
+    .conteneur_projets > img
+    {
+        width: calc(100% / 2 - (40px + 4px));
+        margin: 20px;
+    }
+
+    ._conteneur_img > img
+    {
+        width: calc(100% / 2 - (40px));
+        margin: 20px 10px;
+    }
+
+}
+
+/***********
+    l
+    >  992px
+***********/
+
+@media screen and (min-width: 992px)
+{
+    .front-end > div > img,
+    .back-end > div > img,
+    .outils > div > img
+    {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/***********
+    xl
+    > 1200px
+**********/
+
+@media screen and (min-width: 1200px)
+{
+    .icon_menu
+    {
+        right: 20px;
+    }
+ 
+    section
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .front-end > div > img,
+    .back-end > div > img,
+    .outils > div > img
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    ._description_projets
+    {
+        width: 80%;
+        margin: 0 auto;
+        left: inherit;
+    }
+
+}
+
+/***********
+    xxl
+    > 1400px
+***********/
+
+@media screen and (min-width: 1400px)
+{
+    .front-end > div > img,
+    .back-end > div > img,
+    .outils > div > img
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .conteneur_projets
+    {
+        text-align: inherit;
+    }
+
+    .conteneur_projets > img
+    {
+        width: calc(100% / 3 - (40px + 4px));
+        margin: 20px;
+    }
+
+    ._conteneur_img > img
+    {
+        width: calc((100% / 3) - 60px);
+        margin: 10px 20px;
+    }
+}

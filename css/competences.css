@@ -1,0 +1,68 @@
+/*
+    compétences
+*/
+
+.competences
+{
+    width: 100%;
+    /*min-height: 100vh;*/
+    margin-bottom: 80px;
+    padding: 30px;
+}
+
+.front-end,
+.back-end,
+.outils
+{
+    width: 100%;
+    margin-top: 100px;
+    border-top: 2px var(--lightcyan) solid;
+}
+
+.front-end
+{
+    margin-top: 15px;
+}
+
+.front-end > h4,
+.back-end > h4,
+.outils > h4
+{
+    display: inline-block;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins';
+    font-weight: normal;
+    color: white;
+    background-color: var(--lightcyan);
+    text-transform: uppercase;
+}
+
+.front-end > div,
+.back-end > div,
+.outils > div
+{
+    width: 100%;
+}
+
+.front-end > div > img,
+.back-end > div > img,
+.outils > div > img
+{
+    width: 65px;
+    height: 65px;
+    margin: 5px 10px;
+    display: inline-block;
+    border: 2px var(--lightcyan) solid;
+    border-radius: 50%;
+    transition: border-color var(--lin-3),
+                        border-radius var(--lin-3);
+}
+
+.front-end > div > img:hover,
+.back-end > div > img:hover,
+.outils > div > img:hover
+{
+    border-color: var(--cyan);
+    border-radius: 5px;
+}

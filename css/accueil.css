@@ -1,0 +1,131 @@
+/*
+    accueil 
+*/
+
+.accueil
+{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.accueil > div:nth-child(1) > p
+{
+    font-family: 'Poppins';
+    font-size: 2.5em;
+    font-weight: normal;
+    animation: fadeIn var(--eio-2s);
+}
+
+/* titre accueil */
+.titre_accueil
+{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.titre_accueil > h1
+{
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    font-family: 'Poppins';
+    font-size: 3em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--cyan);
+    transform: scale(1,1);
+    animation: fromLeft var(--eio-1s);
+}
+
+.titre_accueil > p
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.5em;
+    animation: fromLeft var(--eio-1s);
+}
+
+/* boutons accueil */
+.boutons_accueil
+{
+    width: 100%;
+    padding-top: 30px;
+    white-space: nowrap;
+}
+
+.boutons_accueil> button
+{
+    position: relative;
+    top: 0;
+    font-size: 1.1em;
+    color: white;
+    background-color: black;
+    border: 2px var(--cyan) solid;
+    cursor: pointer;
+    animation: fadeIn var(--eio-2s);
+}
+
+.boutons_accueil> button:nth-child(2)
+{
+    margin-left: 10px;
+}
+
+.boutons_accueil> button > span
+{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightcyan);
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition:  transform var(--eio-2);
+}
+
+.boutons_accueil> button:hover > span
+{
+    transform: scaleX(1);
+    transform-origin: 0 0;
+}
+
+
+.boutons_accueil> button > a
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+/* scroll indicator */
+.accueil > a
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 20px;
+    border: 2px var(--cyan) solid;
+    border-radius: 5px;
+    animation: fadeIn var(--eio-2s);
+}
+
+.accueil > a::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: var(--cyan);
+    animation: scrollIndicator 1.5s ease-in-out infinite;
+}

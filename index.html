@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr" class="full_w_h overflow_hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/css.min.css" type="text/css" rel="stylesheet">
+
+    <title>MS - Portfolio</title>
+</head>
+
+
+<body class="full_w_h overflow_hidden">
+    <div id="app">
+        <!--
+            loader
+        -->
+        <transition name="fade">
+            <div v-if="activeVue == 'loader' " class="loader">
+                <div></div>
+            </div>
+        </transition>
+
+        <!--
+            header
+        -->
+        <header v-if="activeVue == 'content'">
+            <div class="icon_menu" onclick="showMenu()">
+                <span class="icon_menu_first"></span>
+                <span class="icon_menu_second"></span>
+                <span class="icon_menu_third"></span>
+            </div>
+            <nav>
+                <a href="#1" onclick="showMenu()"><span class="material-icons">home</span>Accueil</a>
+                <a href="#2" onclick="showMenu()"><span class="material-icons">person</span>À Propos</a>
+                <a href="#3" onclick="showMenu()"><span class="material-icons">view_list</span>Compétences</a>
+                <a href="#4" onclick="showMenu()"><span class="material-icons">devices</span>Projets</a>
+            </nav>
+        </header>
+ 
+        <!--
+            content
+        -->
+        <section v-if="activeVue == 'content' ">
+            
+            <!--
+                accueil
+            -->
+            <div class="accueil" id="1">
+                <div>
+                    <p>PORTFOLIO</p>
+                </div>
+                <div class="titre_accueil">
+                    <h1>Mélik Selek</h1>
+                    <p>Développeur Web</p>
+                </div>
+                <div class="boutons_accueil">
+                    <button><span></span><a href="#4">Mes Projets</a></button>
+                    <button><span></span><a href="#2">À Propos</a></button>
+                </div>
+            </div>
+
+            <!--
+                a propos
+            -->
+            <div class="a_propos" id="2">
+                <div class="titre_section">
+                    <h2><span class="material-icons">person</span>À Propos</h2>
+                </div>
+                <div>
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        Bonjour,
+                        <br>
+                        <br>
+                        Je m'appelle Mélik et je suis développeur web.
+                        <br>
+                        <br>
+                        Passionné par l'informatique, je suis autodidacte depuis plusieurs années. J'ai appris les bases du développement à mon rythme en parallèle de mes précédentes activités professionnelles.
+                        J'aime concevoir des sites web et m'occuper de leur aspect visuel pour exprimer ma créativité. Mon côté perfectionniste me permet d'être soucieux du moindre détail.
+                        <br>
+                        <br>
+                        Curieux et motivé, j'aimerais aller plus loin dans le développement web, apprendre de nouveaux langages et nouvelles techniques de développement. C'est pour cela que je m'investis sur différents projets que vous trouverez plus bas.
+                    </p>
+                    <h3>Mon Parcours</h3>
+                    <p>
+                        Diplômé d'un Bac professionnel commerce en 2013, j'ai fait le choix de me réorienter suite au premier confinement. C'est naturellement que je me suis tourné vers le développement web, avec lequel je m'étais déjà familiarisé par le passé. C'est d'ailleurs cela qui a été déterminant dans mon choix de futur parcours professionnel.
+                        <br>
+                        <br>
+                        Actuellement, je suis en formation avec l'Afpa pour l'obtention du titre professionnel de niveau 5 de développeur web et web mobile.
+                    </p>
+                </div>
+                <div>
+                    <button><span></span><a href="assets/other/cv.pdf" target="_blank">Télécharger CV</a></button>
+                </div>
+            </div>
+
+            <!--
+                compétences
+            -->
+            <div class="competences" id="3">
+                <div class="titre_section">
+                    <h2><span class="material-icons">view_list</span>Compétences</h2>
+                </div>
+                <div class="front-end">
+                    <h4>Front-End</h4>
+                    <div>
+                        <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                        <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                        <img src="assets/img/techno/sass.svg" alt="logo sass" title="SASS">
+                        <img src="assets/img/techno/bootstrap.svg" alt="logo bootstrap" title="Bootstrap">
+                        <img src="assets/img/techno/wordpress.svg" alt="logo wordpress" title="Wordpress">
+                        <img src="assets/img/techno/javascript.svg" alt="logo javascript" title="Javascript">
+                        <img src="assets/img/techno/jquery.svg" alt="logo jquery" title="jQuery">
+                        <img src="assets/img/techno/vue.svg" alt="logo vuejs" title="Vuejs">
+                    </div>
+                </div>
+                <div class="back-end">
+                    <h4>Back-End</h4>
+                    <div>
+                        <img src="assets/img/techno/php.svg" alt="logo php" title="PHP">
+                        <img src="assets/img/techno/mysql.svg" alt="logo mysql" title="MySQL">
+                        <img src="assets/img/techno/symfony.svg" alt="logo symfony" title="Symfony">
+                    </div>
+                </div>
+                <div class="outils">
+                    <h4>Outils</h4>
+                    <div>
+                        <img src="assets/img/techno/git.svg" alt="logo Git" title="Git">
+                        <img src="assets/img/techno/vscode.svg" alt="logo Visual Studio Code" title="VSCode">
+                        <img src="assets/img/techno/ps.svg" alt="logo photoshop" title="Photoshop">
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                projets
+            -->
+            <div class="projets" id="4">
+                <div class="titre_section">
+                    <h2><span class="material-icons">devices</span>Projets</h2>
+                </div>
+                <div class="conteneur_projets">
+                    <img onclick="voirProjet(this)" id="barber" src="assets/img/projets/barber.png" alt="projet My Barber">
+                    <img onclick="voirProjet(this)" id="lyon" src="assets/img/projets/lyon.png" alt="projet Lyon">
+                    <img onclick="voirProjet(this)" id="juste_prix" src="assets/img/projets/juste_prix.png" alt="projet jeux du Juste Prix">
+                    <img onclick="voirProjet(this)" id="garage" src="assets/img/projets/garage.png" alt="projet Mon Garage">
+                    <img onclick="voirProjet(this)" id="nl" src="assets/img/projets/nl.png" alt="image projet N&L restaurant">
+                    <!--<img onclick="voirProjet(this)" id="lspd_computer" src="assets/img/projets/lspdComputer.png" alt="projet LSPDComputer">-->
+                    <img onclick="voirProjet(this)" id="my_entreprise" src="assets/img/projets/myEntreprise.png" alt="projet myEntreprise">
+                    <img onclick="voirProjet(this)" id="my_gouvernement" src="assets/img/projets/myGouvernement.png" alt="projet myGouvernement">
+                </div>
+            </div>
+            <!-- description projets-->
+            <div onclick="fermerProjet()" class="_overlay"></div>
+            <div class="_description_projets">
+                <div class="_close">
+                    <span class="material-icons" onclick="fermerProjet()">close</span>
+                </div>
+                <div class="_projets">
+                    <!-- barber -->
+                    <div class="_barber">
+                        <p class="titre">MyBarber</p>
+                        <p class="_type">TP - 2021</p>
+                        <p class="_description">Réalisation d'un site vitrine responsive avec Bootstrap.</p>
+                        <ul>
+                            <li><span>&#8226;</span>Responsive</li>
+                        </ul>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/bootstrap.svg" alt="logo bootstrap" title="Bootstrap">
+                        </div>
+                        <div class="_button">
+                            <button><span></span><a href="https://yeswelan.github.io/mybarber/" target="_blank">Visiter</a></button>
+                            <button><span></span><a href=" https://github.com/YesWeLan/mybarber" target="_blank">Github</a></button>
+                        </div>
+                    </div>
+                    <!-- lyon -->
+                    <div class="_lyon">
+                        <p class="titre">Que faire à Lyon</p>
+                        <p class="_type">TP - 2021</p>
+                        <p class="_description">Réalisation d'un site de "bonnes adresses" sur la ville de Lyon.</p>
+                        <ul>
+                            <li><span>&#8226;</span>Responsive</li>
+                            <li><span>&#8226;</span>Appel d'une API pour afficher la météo de la ville</li>
+                            <li><span>&#8226;</span>Appel des pages par l'objet XMLHttpRequest</li>
+                        </ul>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/sass.svg" alt="logo sass" title="SASS">
+                            <img src="assets/img/techno/javascript.svg" alt="logo javascript" title="Javascript">
+                        </div>
+                        <div class="_button">
+                            <button><span></span><a href="https://yeswelan.github.io/que_faire_a_lyon" target="_blank">Visiter</a></button>
+                            <button><span></span><a href="https://github.com/YesWeLan/que_faire_a_lyon" target="_blank">Github</a></button>
+                        </div>
+                    </div>
+                    <!-- juste prix -->
+                    <div class="_juste_prix">
+                        <p class="titre">Jeu du Juste Prix</p>
+                        <p class="_type">TP - 2021</p>
+                        <p class="_description">Réalisation du jeu le Juste Prix.</p>
+                        <ul>
+                            <li><span>&#8226;</span>Responsive</li>
+                        </ul>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/javascript.svg" alt="logo javascript" title="Javascript">
+                        </div>
+                        <div class="_button">
+                            <button><span></span><a href="https://yeswelan.github.io/juste_prix" target="_blank">Visiter</a></button>
+                            <button><span></span><a href="https://github.com/YesWeLan/juste_prix" target="_blank">Github</a></button>
+                        </div>
+                    </div>
+                    <!-- garage -->
+                    <div class="_garage">
+                        <p class="titre">Mon Garage</p>
+                        <p class="_type">TP - 2021</p>
+                        <p class="_description">Réalisation d'un site vitrine responsive.</p>
+                        <ul>
+                            <li><span>&#8226;</span>Responsive</li>
+                            <li><span>&#8226;</span>Appel des pages par l'objet XMLHttpRequest.</li>
+                        </ul>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/javascript.svg" alt="logo javascript" title="Javascript">
+                        </div>
+                        <div class="_button">
+                            <button><span></span><a href="https://yeswelan.github.io/mon_garage" target="_blank">Visiter</a></button>
+                            <button><span></span><a href="https://github.com/YesWeLan/mon_garage" target="_blank">Github</a></button>
+                        </div>
+                    </div>
+                    <!-- n&l -->
+                    <div class="_nl">
+                        <p class="titre">N&L - Restaurant</p>
+                        <p class="_type">Projet Personnel - 2017</p>
+                        <p class="_description">
+                            Première réalisation lorsque j'apprenais le HTML/CSS. J'ai proposé de créer un site pour afficher la carte du restaurant là où je travaillais.
+                            <br><i>Le site n'est plus en ligne, mais vous pouvez voir des captures d'écran ci-dessous.</i>
+                        </p>
+                        <ul>
+                            <li><span>&#8226;</span>Création des images de la carte du restaurant</li>
+                            <li><span>&#8226;</span>Responsive</li>
+                        </ul>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                        </div>
+                        <div class="_conteneur_img">
+                            <img onclick="voirImg(this)" src="assets/img/projets/nl/1.png" alt="accueil site">
+                            <img onclick="voirImg(this)" src="assets/img/projets/nl/2.png" alt="carte du restaurant">
+                            <img onclick="voirImg(this)" src="assets/img/projets/nl/3.png" alt="carte des sandwichs">
+                            <img onclick="voirImg(this)" src="assets/img/projets/nl/4.png" alt="info concernant le restaurant">
+                        </div>
+                    </div>
+                    <!-- lspd computer
+                        <div class="_lspd_computer">
+                            <p class="titre">LSPD Computer</p>
+                            <p class="_type">Projet Commun - 2021</p>
+                            <p class="_description">
+                                Participation à l'amélioration d'un serveur <a href="https://www.eclypsia.com/fr/gta5/actualites/gta-v-rp-presentation-des-bases-21469" target="_blank">GTA 5 RP</a>.
+                                <br>
+                                Mon rôle dans ce projet a été d'améliorer et d'adapter certains existants (html, css, js) en simplifiant le code et recréer un style personnalisé.
+                            </p>
+                            <div class="_techno">
+                                <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                                <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                                <img src="assets/img/techno/javascript.svg" alt="logo javavascript" title="Javascript">
+                                <img src="assets/img/techno/vue.svg" alt="logo vuejs" title="Vuejs">
+                                <img src="assets/img/techno/node.svg" alt="logo nodejs" title="Nodejs">
+                            </div>
+                        </div>
+                    -->
+                    <!-- my entreprise -->
+                    <div class="_my_entreprise">
+                        <p class="titre">myEntreprise</p>
+                        <p class="_type">Projet Commun - 2021</p>
+                        <p class="_description">
+                            Participation à l'amélioration d'un serveur <a href="https://www.eclypsia.com/fr/gta5/actualites/gta-v-rp-presentation-des-bases-21469" target="_blank">GTA 5 RP</a>.
+                            <br>
+                            Mon rôle dans ce projet a été d'améliorer et d'adapter certains existants (html, css, js) en simplifiant le code et en recréant un style personnalisé.
+                        </p>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/javascript.svg" alt="logo javavascript" title="Javascript">
+                            <img src="assets/img/techno/vue.svg" alt="logo vuejs" title="Vuejs">
+                            <img src="assets/img/techno/node.svg" alt="logo nodejs" title="Nodejs">
+                        </div>
+                        <div class="_conteneur_img">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myEntreprise/1.jpg" alt="image projet myEntreprise">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myEntreprise/2.jpg" alt="image projet myEntreprise">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myEntreprise/3.jpg" alt="image projet myEntreprise">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myEntreprise/4.jpg" alt="image projet myEntreprise">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myEntreprise/5.jpg" alt="image projet myEntreprise">
+                        </div>
+                    </div>
+                    <!-- my gouvernement -->
+                    <div class="_my_gouvernement">
+                        <p class="titre">myGouvernement</p>
+                        <p class="_type">Projet Commun - 2021</p>
+                        <p class="_description">
+                            Participation à l'amélioration d'un serveur <a href="https://www.eclypsia.com/fr/gta5/actualites/gta-v-rp-presentation-des-bases-21469" target="_blank">GTA 5 RP</a>.
+                            <br>
+                            Mon rôle dans ce projet a été d'améliorer et d'adapter certains existants (html, css, js) en simplifiant le code et en recréant un style personnalisé.
+                        </p>
+                        <div class="_techno">
+                            <img src="assets/img/techno/html.svg" alt="logo html" title="HTML">
+                            <img src="assets/img/techno/css.svg" alt="logo css" title="CSS">
+                            <img src="assets/img/techno/javascript.svg" alt="logo javavascript" title="Javascript">
+                            <img src="assets/img/techno/vue.svg" alt="logo vuejs" title="Vuejs">
+                            <img src="assets/img/techno/node.svg" alt="logo nodejs" title="Nodejs">
+                        </div>
+                        <div class="_conteneur_img">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myGouvernement/1.jpg" alt="image projet myGouvernement">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myGouvernement/2.jpg" alt="image projet myGouvernement">
+                            <img onclick="voirImg(this)" src="assets/img/projets/myGouvernement/3.jpg" alt="image projet myGouvernement">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                footer    
+            -->
+            <footer>
+                <span>2021 | Mélik Selek - Développeur Web</span>
+                <div class="boutons_social">
+                    <!-- linkedin -->
+                    <a href="https://linkedin.com/in/melik-s" target="_blank">
+                        <svg version="1.1" id="linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" xml:space="preserve">
+                            <title>Linkedin</title>
+                            <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+                            C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+                            H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+                            c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+                            s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+                            c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+                            c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+                            c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+                            L341.91,330.654L341.91,330.654z"/>
+                        </svg>
+                    </a>
+                    <!-- github -->
+                    <a href="https://github.com/YesWeLan" target="_blank">
+                        <svg version="1.1" id="github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" xml:space="preserve">
+                            <title>Github</title>
+                            <path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
+                            c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464
+                            c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496
+                            c22.848,39.264,59.936,27.936,74.528,21.344c2.304-16.608,8.928-27.936,16.256-34.368
+                            c-56.832-6.496-116.608-28.544-116.608-127.008c0-28.064,9.984-51.008,26.368-68.992c-2.656-6.496-11.424-32.64,2.496-68
+                            c0,0,21.504-6.912,70.4,26.336c20.416-5.696,42.304-8.544,64.096-8.64c21.728,0.128,43.648,2.944,64.096,8.672
+                            c48.864-33.248,70.336-26.336,70.336-26.336c13.952,35.392,5.184,61.504,2.56,68c16.416,17.984,26.304,40.928,26.304,68.992
+                            c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496
+                            c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z"/>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- script -->
+    <script src="js/vue/vue.min.js"></script>
+    <script src="js/vue/app.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/libs/balls.js"></script>
+
+</body>
+</html>

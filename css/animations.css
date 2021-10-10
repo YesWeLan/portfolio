@@ -1,0 +1,140 @@
+@keyframes loader
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+/***********************************/
+
+:root
+{
+    --right: 15px;
+}
+
+@media screen and (min-width: 1200px)
+{
+    :root
+    {
+        --right: 20px;
+    }
+}
+
+@keyframes iconMenu
+{
+    from
+    {
+        right: -60px;
+    }
+    to
+    {
+        right: var(--right);
+    }
+}
+
+@-webkit-keyframes iconMenu
+{
+    from
+    {
+        right: -60px;
+    }
+    to
+    {
+        right: var(--right);
+    }
+}
+
+/***********************************/
+
+@keyframes scrollIndicator
+{
+    0%,100%
+    {
+        height: 20%;
+    }
+    30%
+    {
+        height: 50%;
+    }
+}
+
+@-webkit-keyframes scrollIndicator
+{
+    0%,100%
+    {
+        height: 20%;
+    }
+    30%
+    {
+        height: 50%;
+    }
+}
+
+/***********************************/
+
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+/***********************************/
+
+@keyframes fromLeft
+{
+    from
+    {
+        left: -100%;
+    }
+    to
+    {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes fromLeft
+{
+    from
+    {
+        left: -100%;
+    }
+    to
+    {
+        left: 0;
+    }
+}
