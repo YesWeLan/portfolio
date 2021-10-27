@@ -77,7 +77,7 @@
 ._description_projets_active
 {
     visibility: visible;
-    max-height: 50vh;
+    max-height: 90vh;
     border-color: var(--cyan);
     border-radius: 10px 10px 0 0;
     overflow-y: auto;
